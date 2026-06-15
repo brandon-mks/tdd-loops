@@ -11,7 +11,11 @@
  * echo("test", 1); // "test"
  */
 export function echo(word, n) {
-  // TODO
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    str += word;
+  }
+  return str;
 }
 
 /**
@@ -26,9 +30,7 @@ export function echo(word, n) {
  * @example
  * echoWithSpace("test", 1); // "test"
  */
-export function echoWithSpace(word, n) {
-  // TODO
-}
+export function echoWithSpace(word, n) {}
 
 /**
  * @param {number} n - The number to stop at
