@@ -30,7 +30,13 @@ export function echo(word, n) {
  * @example
  * echoWithSpace("test", 1); // "test"
  */
-export function echoWithSpace(word, n) {}
+export function echoWithSpace(word, n) {
+  let str = "";
+  for (let i = 0; i < n; i++) {
+    str += word + " ";
+  }
+  return str.trim();
+}
 
 /**
  * @param {number} n - The number to stop at
