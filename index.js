@@ -70,7 +70,11 @@ export function sumTo(n) {
  * sumFromTo(2, 2); // 2
  */
 export function sumFromTo(a, z) {
-  // TODO
+  let sum = 0;
+  for (let i = a; i <= z; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
