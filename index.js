@@ -200,7 +200,7 @@ export function moveWater(colander, bucket) {
     return 1;
   } else {
     let trips = 0;
-    for (let volume = colander; volume <= bucket; colander--) {
+    for (let volume = 0; volume < bucket; colander--) {
       if (colander < 1) {
         volume++;
         trips++;
