@@ -131,7 +131,7 @@ export function sumOddsToN(n) {
  */
 export function getGrowthTime(start, target) {
   if (start <= 0) {
-    start = void 0;
+    return;
   } else {
     let timer = 0;
     for (let i = start; i < target; i *= 2) {
@@ -192,7 +192,26 @@ export function getCompoundTime(start, rate, target) {
  * moveWater(7, 3); // 1
  */
 export function moveWater(colander, bucket) {
-  // TODO
+  if (colander <= 0) {
+    return;
+  } else if (bucket <= 0) {
+    return 0;
+  } else if (colander > bucket) {
+    return 1;
+  } else {
+    let trips = 0;
+    for (let volume = colander; volume <= bucket; colander--) {
+      if (colander < 1) {
+        volume++;
+        trips++;
+      } else {
+        volume += colander;
+        trips++;
+      }
+    }
+    return trips;
+  }
+  //can't figure this out and feeling violent!
 }
 
 /**
@@ -212,5 +231,15 @@ export function moveWater(colander, bucket) {
  * fizzbuzz(15); // logs 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
  */
 export function fizzbuzz(n) {
-  // TODO
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 == 0) {
+      console.log("fizz");
+    } else if (i % 5 == 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
+  }
 }
